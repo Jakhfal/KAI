@@ -1,3 +1,4 @@
+export const dynamic = "force-dynamic";
 import { axiosInstance } from "@/helper/api"
 import { KeretaType } from "../types"
 import { getServerCookie } from "@/helper/server-cookie"

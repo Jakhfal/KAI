@@ -7,6 +7,8 @@ export const storesCookie = (
     Cookies.set(key, value)
 }
 
+
+
 export const getStoresCookie = (
     key: string
 ): string => {
@@ -15,4 +17,10 @@ export const getStoresCookie = (
 
 export const removeCookie = (key: string): void => {
     Cookies.remove(key)
+}
+
+export const getCookie = (
+    key: string
+): string => {
+    return Cookies.get(key) || ""
 }

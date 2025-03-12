@@ -1,3 +1,4 @@
+export const dynamic = "force-dynamic";
 import React from 'react'
 import { axiosInstance } from '@/helper/api'
 import Booking from './booking'
@@ -56,14 +57,14 @@ const showTime = (date: string) => {
 }
 
 interface Props {
-    params: {
+    params:Promise<{
         schedule_id: number
-    }
+    }>
 }
 const page = async (myprops: Props) => {
 
-    const detailsKereta = await getTrainBySchedule(myprops.params.schedule_id)
-    const detailsSchedule = await getScheduleDetails(myprops.params.schedule_id)
+    const detailsKereta = await getTrainBySchedule((await myprops.params).schedule_id)
+    const detailsSchedule = await getScheduleDetails((await myprops.params).schedule_id)
 
     return (
         <div className='w-full p-3'>

@@ -49,6 +49,7 @@ const Booking = (props: Props) => {
         setWagons([...tempWagons])
     }
 
+    
     const handleRemove = (index: number, seatBook: SeatBook) => {
         const temp = [...details]
         temp.splice(index, 1)

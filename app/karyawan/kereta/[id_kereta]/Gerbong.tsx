@@ -2,7 +2,6 @@ import { GerbongType } from "../../types"
 import Addseat from "./addSeat"
 import DropGerbong from "./dropGerbong"
 import EditGerbong from "./editGerbong"
-import EditSeat from "./editSeat"
 import Seat from "./Seat"
 
 type props = {

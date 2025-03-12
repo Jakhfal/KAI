@@ -8,10 +8,10 @@ import Schedule from './Jadwal'
 
 
 interface props {
-    searchParams: {
+    searchParams: Promise<{
         departured_location: string,
         arrived_location: string
-    }
+    }>
 }
 
 const getJadwal = async (
@@ -40,8 +40,8 @@ const getJadwal = async (
 }
 
 const JadwalPage = async (myprops: props) => {
-    const departured_location = await myprops.searchParams!.departured_location.toString()
-    const arrived_location = await myprops.searchParams!.arrived_location.toString()
+    const departured_location = (await myprops.searchParams)?.departured_location.toString()
+    const arrived_location = (await myprops.searchParams)?.arrived_location.toString()
 
     const listJadwal = await getJadwal(departured_location, arrived_location)
 

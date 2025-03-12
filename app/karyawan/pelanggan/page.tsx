@@ -1,3 +1,4 @@
+export const dynamic = "force-dynamic";
 // function untuk get all data kereta
 
 import { getServerCookie } from "@/helper/server-cookie";

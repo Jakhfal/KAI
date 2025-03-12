@@ -1,5 +1,5 @@
+export const dynamic = "force-dynamic";
 import React from 'react'
-
 import { ScheduleType} from '@/app/karyawan/types'
 import { axiosInstance } from '@/helper/api'
 import { getServerCookie } from '@/helper/server-cookie'
@@ -8,10 +8,10 @@ import Schedule from './Jadwal'
 
 
 interface props {
-    searchParams: {
+    searchParams: Promise<{
         departured_location: string,
         arrived_location: string
-    }
+    }>
 }
 
 const getJadwal = async (

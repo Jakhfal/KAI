@@ -1,5 +1,4 @@
 import CustomerTemplate from "@/components/CustomerTemplate";
-import EmployeeTemplate from "@/components/EmployeeTemplate";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -14,7 +13,7 @@ export default function RootLayout({
 }>) {
     return (
         <CustomerTemplate>
-             {children}
+            {children}
         </CustomerTemplate>
         
     );
